@@ -22,10 +22,9 @@ else
     yellow "xray最新版本号为： $last_version"
     echo "开始下载xray文件..."
     wget https://github.com/XTLS/Xray-core/releases/download/$last_version/Xray-linux-32.zip
-    cd /root
-    mkdir ./Xray
-    unzip -d /root/Xray Xray-linux-32.zip
-    rm Xray-linux-32.zip
+    mkdir /root/Xray
+    unzip -d /root/Xray ./Xray-linux-32.zip
+    rm ./Xray-linux-32.zip
     cd /root/Xray
     if [[ -f "xray" ]]; then
         green "下载成功！"
